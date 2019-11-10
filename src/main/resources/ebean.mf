@@ -1,0 +1,4 @@
+entity-packages: com.a2dict.equeryexample.entity
+querybean-packages: com.a2dict.equeryexample
+transactional-packages: com.a2dict.equeryexample
+profile-location: true
