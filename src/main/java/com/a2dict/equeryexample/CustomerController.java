@@ -18,12 +18,12 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class CustomerController {
 
-    private IPagedQuery<Customer> queryFunc;
+    private IPagedQuery<Customer> queryFunc = EQuery.buildPagedQuery(Customer.class);
 
-    @Autowired
-    public CustomerController(Database db) {
-        queryFunc = EQuery.buildPagedQuery(db, Customer.class);
-    }
+//    @Autowired
+//    public CustomerController(Database db) {
+//        queryFunc = EQuery.buildPagedQuery(db, Customer.class);
+//    }
 
     @RequestMapping("/customers")
     public PageWrap<Customer> query(QReq req) {
